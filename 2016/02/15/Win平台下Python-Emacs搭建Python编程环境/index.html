@@ -1,26 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[SWBetaWiKi]]></title>
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
   
-  <link href="/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2016-02-15T08:20:07.021Z</updated>
-  <id>http://yoursite.com/</id>
+  <title>Win平台下Python+Emacs搭建Python编程环境 | SWBetaWiKi</title>
+  <meta name="author" content="SWBeta">
   
-  <author>
-    <name><![CDATA[SWBeta]]></name>
-    
-  </author>
+  <meta name="description" content="Writing 1000 Words a Week Changed My Life.">
   
-  <generator uri="http://hexo.io/">Hexo</generator>
   
-  <entry>
-    <title><![CDATA[Win平台下Python+Emacs搭建Python编程环境]]></title>
-    <link href="http://yoursite.com/2016/02/15/Win%E5%B9%B3%E5%8F%B0%E4%B8%8BPython-Emacs%E6%90%AD%E5%BB%BAPython%E7%BC%96%E7%A8%8B%E7%8E%AF%E5%A2%83/"/>
-    <id>http://yoursite.com/2016/02/15/Win平台下Python-Emacs搭建Python编程环境/</id>
-    <published>2016-02-15T08:09:12.000Z</published>
-    <updated>2016-02-15T08:20:07.021Z</updated>
-    <content type="html"><![CDATA[<h1 id="Win_u5E73_u53F0_u4E0BPython+Emacs_u642D_u5EFAPython_u7F16_u7A0B_u73AF_u5883"><a href="#Win_u5E73_u53F0_u4E0BPython+Emacs_u642D_u5EFAPython_u7F16_u7A0B_u73AF_u5883" class="headerlink" title="Win平台下Python+Emacs搭建Python编程环境"></a>Win平台下Python+Emacs搭建Python编程环境</h1><h2 id="u6240_u9700_u5DE5_u5177"><a href="#u6240_u9700_u5DE5_u5177" class="headerlink" title="所需工具"></a>所需工具</h2><ul>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Win平台下Python+Emacs搭建Python编程环境"/>
+  <meta property="og:site_name" content="SWBetaWiKi"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="SWBetaWiKi" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">  
+  <link rel="stylesheet" href="/css/sidenav.css" media="screen" type="text/css">  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/">SWBetaWiKi</a><span class="split"></span><span class="title">Win平台下Python+Emacs搭建Python编程环境</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2016-02-15</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  <div class="col-xs-12 col-sm-3 col-md-3 toc"> 
+	<!-- toc -->
+<script type="text/javascript">
+		jQuery(document).ready(function() {
+ 		   generateWikiTOC('.note', '.toc',  2 , 2 );
+		});
+</script>
+  </div><!-- col-md-3 -->
+  
+  
+
+  
+  <div class="col-xs-12 col-sm-9 col-md-9 note">
+	
+
+	  <!-- content -->
+	  <h1 id="Win_u5E73_u53F0_u4E0BPython+Emacs_u642D_u5EFAPython_u7F16_u7A0B_u73AF_u5883"><a href="#Win_u5E73_u53F0_u4E0BPython+Emacs_u642D_u5EFAPython_u7F16_u7A0B_u73AF_u5883" class="headerlink" title="Win平台下Python+Emacs搭建Python编程环境"></a>Win平台下Python+Emacs搭建Python编程环境</h1><h2 id="u6240_u9700_u5DE5_u5177"><a href="#u6240_u9700_u5DE5_u5177" class="headerlink" title="所需工具"></a>所需工具</h2><ul>
 <li><a href="https://www.python.org/" target="_blank" rel="external">Python3.0(及以上)</a></li>
 <li><a href="https://www.gnu.org/software/emacs/" target="_blank" rel="external">Emacs24.5</a></li>
 <li><a href="https://git-scm.com/" target="_blank" rel="external">Git</a></li>
@@ -99,176 +146,77 @@
 <li><p>minibuffer 里出现 done，就 OK 了。<br>　<br>　<br>　<br>　<br>一个基础的 Win 平台下 Python + Emacs 编程环境就成形了。</p>
 </li>
 </ol>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="Win_u5E73_u53F0_u4E0BPython+Emacs_u642D_u5EFAPython_u7F16_u7A0B_u73AF_u5883"><a href="#Win_u5E73_u53F0_u4E0BPython+Emacs_u642D_u5EFA]]>
-    </summary>
-    
-      <category term="emacs" scheme="http://yoursite.com/tags/emacs/"/>
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-      <category term="software" scheme="http://yoursite.com/tags/software/"/>
-    
-      <category term="software" scheme="http://yoursite.com/categories/software/"/>
-    
-  </entry>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+			
+			
+		
+	
+		
+	
+		
+	
+	
+	
+		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next disabled"><a>next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+  &copy; 2016 SWBeta
   
-  <entry>
-    <title><![CDATA[纯小白在GitHub上利用Git和Hexo搭建静态博客]]></title>
-    <link href="http://yoursite.com/2016/02/04/%E7%BA%AF%E5%B0%8F%E7%99%BD%E5%9C%A8GitHub%E4%B8%8A%E5%88%A9%E7%94%A8Git%E5%92%8CHexo%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2016/02/04/纯小白在GitHub上利用Git和Hexo搭建静态博客/</id>
-    <published>2016-02-04T10:10:25.000Z</published>
-    <updated>2016-02-15T08:13:55.633Z</updated>
-    <content type="html"><![CDATA[<p>看了很多网上的朋友写的关于在 GitHub 上利用 Git 和 Hexo 搭建静态博客的文章，对于完全“小白”的我，尽管一步一步诚慌诚恐地操作，总有这样或那样的问题令我无所适从。参照 N 个博友的方法后，磕磕绊绊地总算搭建成了，将具体的方法逐一记录，以备参考。</p>
-<h1 id="u51C6_u5907_u5DE5_u4F5C"><a href="#u51C6_u5907_u5DE5_u4F5C" class="headerlink" title="准备工作"></a>准备工作</h1><p>Win7环系统下需要使的软件：</p>
-<ul>
-<li><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
-</ul>
-<ul>
-<li><a href="https://git-for-windows.github.io/" target="_blank" rel="external">Git for windows</a></li>
-</ul>
-<ul>
-<li><a href="https://hexo.io/" target="_blank" rel="external">Hexo</a></li>
-</ul>
-<ul>
-<li><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">Markdown 编辑器</a>（本人使用 <a href="http://pad.haroopress.com/user.html" target="_blank" rel="external">Haroopad</a> 编辑阅读器）</li>
-</ul>
-<ul>
-<li><a href="https://github.com/" target="_blank" rel="external">GitHub账号</a></li>
-</ul>
-<h2 id="Hexo__u7B80_u4ECB"><a href="#Hexo__u7B80_u4ECB" class="headerlink" title="Hexo 简介"></a>Hexo 简介</h2><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<p>发布时，Hexo 可以部署在自己的 Node 服务器上面，也可以部署 github 上面。对于个人用户来说，部署在github上好处颇多，不仅可以省去服务器的成本，还可以减少各种系统运维的麻烦事(系统管理、备份、网络)。所以，基于 github 的个人站点，正在开始流行起来……</p>
-<p>Hexo 的<a href="https://hexo.io/" target="_blank" rel="external">官方网站</a>，也是基于Github构建的网站。</p>
-<h2 id="u5B89_u88C5_Git"><a href="#u5B89_u88C5_Git" class="headerlink" title="安装 Git"></a>安装 Git</h2><p>按提示安装即可。</p>
-<h2 id="u5B89_u88C5_Node-js"><a href="#u5B89_u88C5_Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h2><p><strong>注意:</strong> 安装完成后，检查是否将Node.js的安装路径添加入环境变量<code>path</code>，使<code>npm</code>命令生效。</p>
-<h2 id="u5B89_u88C5Hexo"><a href="#u5B89_u88C5Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h2><p>因为安装 Git 和 Node.js 需将相应的目录添加入环境变量<code>path</code>，应先重启电脑。重启后，打开<code>Git Bash</code>，输入以下命令安装即可：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">npm install hexo --save</span><br><span class="line"></span><br><span class="line"><span class="comment">#如果命令无法运行，可以尝试更换taobao的npm源</span></span><br><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-<h2 id="Hexo_u521D_u59CB_u5316_u8BBE_u7F6E"><a href="#Hexo_u521D_u59CB_u5316_u8BBE_u7F6E" class="headerlink" title="Hexo初始化设置"></a>Hexo初始化设置</h2><h3 id="u521B_u5EFAHexo_u6587_u4EF6_u5939"><a href="#u521B_u5EFAHexo_u6587_u4EF6_u5939" class="headerlink" title="创建Hexo文件夹"></a>创建Hexo文件夹</h3><p>安装完Hexo后，可以根据需要建个目录（例如：F:\hexo），然后右键点击，打开<code>Git Bash</code>，执行停命令如下：</p>
-<p><img src="/images/open-bash.png" alt="打开Git Bush"></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">hexo init</span><br><span class="line">npm install</span><br><span class="line"><span class="comment">#新建完成后，指定文件夹的目录如下</span></span><br><span class="line"><span class="comment">#或略有不同，根据不同版本 Hexo 而不同</span></span><br><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── scripts</span><br><span class="line">├── <span class="built_in">source</span></span><br><span class="line">|      ├── _drafts</span><br><span class="line">|      └── _posts</span><br><span class="line">└── themes</span><br></pre></td></tr></table></figure>
-<h3 id="u5B89_u88C5Hexo_u63D2_u4EF6"><a href="#u5B89_u88C5Hexo_u63D2_u4EF6" class="headerlink" title="安装Hexo插件"></a>安装Hexo插件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-archive --save</span><br><span class="line">npm install hexo-generator-category --save</span><br><span class="line">npm install hexo-generator-tag --save</span><br><span class="line">npm install hexo-server --save</span><br><span class="line">npm install hexo-deployer-git --save</span><br><span class="line">npm install hexo-deployer-heroku --save</span><br><span class="line">npm install hexo-deployer-rsync --save</span><br><span class="line">npm install hexo-deployer-openshift --save</span><br><span class="line">npm install hexo-renderer-marked@<span class="number">0.2</span> --save</span><br><span class="line">npm install hexo-renderer-stylus@<span class="number">0.2</span> --save</span><br><span class="line">npm install hexo-generator-feed@<span class="number">1</span> --save</span><br><span class="line">npm install hexo-generator-sitemap@<span class="number">1</span> --save</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>Hexo简写命令</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">hexo v      <span class="comment">#查看hexo的版本</span></span><br><span class="line">hexo init   <span class="comment">#创建一个hexo项目</span></span><br><span class="line">hexo clean  <span class="comment">#清除缓存文件和已生成的静态文件</span></span><br><span class="line">hexo n      <span class="comment">#生成文章，或者source\_posts手动编辑</span></span><br><span class="line">hexo s      <span class="comment">#本地发布预览效果，可打开localhost:4000查看</span></span><br><span class="line">hexo g      <span class="comment">#生成public静态文件</span></span><br><span class="line">hexo d      <span class="comment">#同步更新至GitHub</span></span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p>创建Hexo文件夹并安装好插件后，便可在此文件夹右键打开<code>Git Bash</code>，启动 Hexo 服务，查看本地生成静态网页的效果了。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>这时端口4000被打开，可通过浏览器打开地址 <a href="http://localhost:4000/，查看博客。" target="_blank" rel="external">http://localhost:4000/，查看博客。</a></p>
-<p><img src="/images/check-blog.png" alt="查看博客"></p>
-<h2 id="u6CE8_u518CGitHub_u8D26_u53F7_u53CA_u5EFA_u7ACB_u4ED3_u5E93"><a href="#u6CE8_u518CGitHub_u8D26_u53F7_u53CA_u5EFA_u7ACB_u4ED3_u5E93" class="headerlink" title="注册GitHub账号及建立仓库"></a>注册GitHub账号及建立仓库</h2><h3 id="u6CE8_u518CGitHub"><a href="#u6CE8_u518CGitHub" class="headerlink" title="注册GitHub"></a>注册GitHub</h3><p>访问，注册十分简单，一定要记住注册时使用的邮箱，因为 GitHub 的通知是发往邮箱的。如下图所示：</p>
-<p><img src="/images/regist-github.png" alt="注册 Github 账号"></p>
-<p>申请成功后，在GitHub官网上登录，并验证邮箱即可。</p>
-<h3 id="u5728GitHub_u4E0A_u5EFA_u7ACB_u4ED3_u5E93"><a href="#u5728GitHub_u4E0A_u5EFA_u7ACB_u4ED3_u5E93" class="headerlink" title="在GitHub上建立仓库"></a>在GitHub上建立仓库</h3><p>与 GitHub 建立好连接之后，就可以方便的使用它提供的 Pages 服务。GitHub Pages 分两种，一种是用你的 GitHub 用户名建立的 username.github.io 这样的用户&amp;组织站点，另一种是依附项目的 Pages。想建立个人博客是用的第一种，形如 username.github.io 这样的可访问的站点，每个用户名下面只能建立一个。如下图所示:</p>
-<p><img src="/images/Create-repository.png" alt="创建仓库1"></p>
-<p><img src="/images/set-repository.png" alt="创建仓库2"></p>
-<h3 id="u751F_u6210_u6D4B_u8BD5_u9875_u9762"><a href="#u751F_u6210_u6D4B_u8BD5_u9875_u9762" class="headerlink" title="生成测试页面"></a>生成测试页面</h3><p>进入刚才创建的仓库,点击右边菜单中的Settings按钮，在跳转到的页面 Update your site 对应处点击“Automatic page generator”按钮，这样就有了一个github自动生成的页面用来测试的时候使用。之后点击继续。</p>
-<p><img src="/images/set-repository2.png" alt="创建 Page"></p>
-<h3 id="u53D1_u5E03_Page"><a href="#u53D1_u5E03_Page" class="headerlink" title="发布 Page"></a>发布 Page</h3><p>选择主题，点击<code>Publish page</code>发布:</p>
-<p><img src="/images/themes.png" alt="发布 Page"></p>
-<p>再次回到仓库，<code>Settings</code>按钮，点击链接就可以看到测试地址页面。</p>
-<p><img src="/images/blog-link.png" alt="博客地址"></p>
-<h2 id="u914D_u7F6E_SSH_Key"><a href="#u914D_u7F6E_SSH_Key" class="headerlink" title="配置 SSH Key"></a>配置 SSH Key</h2><h3 id="u751F_u6210_SSH_Key"><a href="#u751F_u6210_SSH_Key" class="headerlink" title="生成 SSH Key"></a>生成 SSH Key</h3><p>我们如何让本地git项目与远程的GitHub建立联系呢？用SSH key。在桌面或开始菜单中找到 Git Shell，打开后输入以下命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ~/. ssh   <span class="comment">#检查本机的ssh密钥</span></span><br></pre></td></tr></table></figure></p>
-<p>如果提示：No such file or directory 说明你是第一次使用git。需要生成 SSH Key，用以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"邮件地址@youremail.com"</span></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/Users/your_user_directory/.ssh/id_rsa):  <span class="comment">#&lt;回车就OK&gt;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意 1: 此处的邮箱地址，你应输入自己的在 GithHub 上使用的邮箱；<br>注意 2: 此处的「-C」的是大写的「C」。</p>
-</blockquote>
-<p>然后系统会要求你输入 GitHub 注册用户名的密码。这个密码会在你提交项目时使用，如果为空的话提交项目时则不用输入。这个设置是防止别人往你的项目里提交内容。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):  <span class="comment">#&lt;输入密码&gt;</span></span><br><span class="line">Enter same passphrase again:                 <span class="comment">#&lt;再次输入密码&gt;</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>注意：输入密码的时候没有*字样的，你直接输入就可以了。</p>
-</blockquote>
-<p>最后看到这样的界面，就成功设置ssh key了：</p>
-<p><img src="/images/SSH-Key.png" alt="配置SSH Key"></p>
-<h3 id="u6DFB_u52A0SSH_Key_u5230GitHub"><a href="#u6DFB_u52A0SSH_Key_u5230GitHub" class="headerlink" title="添加SSH Key到GitHub"></a>添加SSH Key到GitHub</h3><p>在本机设置 SSH Key 之后，需要添加到 GitHub 上，以完成 SSH 链接的设置。</p>
-<ul>
-<li><p>打开本地 C:\Documents and Settings\Administrator.ssh\id_rsa.pub 文件。此文件里面内容为刚才生成人密钥。如果看不到这个文件，你需要设置显示隐藏文件。准确的复制这个文件的内容，才能保证设置的成功。</p>
-</li>
-<li><p>登陆github系统。点击右上角的 Account Settings—&gt;SSH Public keys —&gt; add another public keys。</p>
-</li>
-<li><p>把你本地生成的密钥复制到里面（key文本框中）， 点击 add key 就ok了。</p>
-</li>
-</ul>
-<h3 id="u6D4B_u8BD5"><a href="#u6D4B_u8BD5" class="headerlink" title="测试"></a>测试</h3><p>可以输入下面的命令，看看设置是否成功，git@github.com的部分不要修改：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure></p>
-<p>如果是下面的反馈：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">The authenticity of host <span class="string">'github.com (207.97.227.239)'</span> can<span class="string">'t be established.</span><br><span class="line">RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.</span><br><span class="line">Are you sure you want to continue connecting (yes/no)?</span></span><br></pre></td></tr></table></figure>
-<p>输入yes就好，然后会看到：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi swbetawiki! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="u8BBE_u7F6E_u7528_u6237_u4FE1_u606F"><a href="#u8BBE_u7F6E_u7528_u6237_u4FE1_u606F" class="headerlink" title="设置用户信息"></a>设置用户信息</h3><p>现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你在 Github 上注册用名，而不是GitHub的昵称。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"swbetawiki"</span>//用户名</span><br><span class="line">git config --global user.email  <span class="string">"XXXX@gmail.com"</span>//填写自己在 GitHub上的邮箱</span><br></pre></td></tr></table></figure>
-<p>本机已成功连接到github。若有问题，请重新设置。常见错误请参考：</p>
-<p><a href="https://help.github.com/articles/generating-an-ssh-key/" target="_blank" rel="external">GitHub Help - Generating SSH Keys</a><br><a href="https://help.github.com/articles/error-permission-denied-publickey/" target="_blank" rel="external">GitHub Help - Error Permission denied (publickey)</a></p>
-<h1 id="u5C06_u672C_u5730_u6587_u4EF6_u90E8_u7F72_u5230_GitHub"><a href="#u5C06_u672C_u5730_u6587_u4EF6_u90E8_u7F72_u5230_GitHub" class="headerlink" title="将本地文件部署到 GitHub"></a>将本地文件部署到 GitHub</h1><h2 id="u4FEE_u6539__config-yml__u914D_u7F6E"><a href="#u4FEE_u6539__config-yml__u914D_u7F6E" class="headerlink" title="修改 _config.yml 配置"></a>修改 _config.yml 配置</h2><p>在创建的 Hexo 文件夹中找到 _config.yml 文件,如下图所示：</p>
-<p><img src="/images/set-config.png" alt="_config.yml"></p>
-<p>找到其中的<code>deploy</code>标签，改成下图所示形式，并保存。注意：冒号后面要加上一个空格，否则会报错。</p>
-<p><img src="/images/modify-deploy.png" alt="修改deploy"></p>
-<h2 id="u5C06_u535A_u5BA2_deploy__u5230_u4ED3_u5E93"><a href="#u5C06_u535A_u5BA2_deploy__u5230_u4ED3_u5E93" class="headerlink" title="将博客 deploy 到仓库"></a>将博客 deploy 到仓库</h2><p>右键点击 Hexo 文件夹，打开<code>Git Bash</code>，依次输入以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>出现以下提示则表示正确：</p>
-<p><img src="/images/deploy-blog.png" alt="发布博客"></p>
-<p>到这一步，个人博客就已经部署到 GitHub 上了，你可以到你的 <a href="https://github.com/SWBetaWiKi/swbetawiki.github.io" target="_blank" rel="external">GitHub</a> 仓库查看是否已经更新。此时,通过 your_user_name.github.io（即你那个仓库的名称，形如：swbetawiki.github.io），就可以看到你的个人博客了。</p>
-<h2 id="u53D1_u5E03_u65B0_u535A_u6587"><a href="#u53D1_u5E03_u65B0_u535A_u6587" class="headerlink" title="发布新博文"></a>发布新博文</h2><h3 id="u65B0_u5EFA_u535A_u6587"><a href="#u65B0_u5EFA_u535A_u6587" class="headerlink" title="新建博文"></a>新建博文</h3><p>可以使用命令新建一篇博文,使用 Git Shell 进入 Hexo 文件夹，输入以下命令：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n &#25991;&#31456;&#26631;&#39064;</span><br></pre></td></tr></table></figure>
-<p>命令执行完后，就会发现在 Hexo\source_posts 目录中多了一个文件博文名.md，这就是我们刚才新建的博文。</p>
-<p>此外，也可以直接进入 Hexo\source_posts 目录中，右键新建一个文本文档，将名字改为博文名.md,这样也新建了一篇博文。</p>
-<h3 id="u65B0_u5EFA_u9875_u9762"><a href="#u65B0_u5EFA_u9875_u9762" class="headerlink" title="新建页面"></a>新建页面</h3><p>上一步新建的博文是显示在单个文章界面。这一步新建的页面是作为单个页面显示的，比如下图的分类、标签、归档和关于我，你点击后都是显示为单个页面。<br>命令新建页面：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">"页面名称"</span></span><br></pre></td></tr></table></figure>
-<p>命令执行完后，就会发现在在 Hexo\source 目录中多了一个文件夹，里面还有一个index.md,这就代表我们新建了一个页面。</p>
-<h3 id="u5199_u535A_u6587"><a href="#u5199_u535A_u6587" class="headerlink" title="写博文"></a>写博文</h3><p>用文本编辑器打开上面新建的博文，如下图所示：</p>
-<p><img src="/images/write-blog.png" alt="写博文"></p>
-<p>新建的博文没有<code>categories</code>和<code>toc</code>，这是手动加上去的，具体有什么用，可参考 Hexo 配置（另写博文）。<br>三个“—”下面就可以四平八稳的写博文了。</p>
-<h3 id="u53D1_u535A_u6587"><a href="#u53D1_u535A_u6587" class="headerlink" title="发博文"></a>发博文</h3><p>写好博文后，保存，使用 Git Shell 进入 Hexo 文件夹，输入以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line"><span class="comment">#(若要本地预览就先执行 hexo server)</span></span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-<p>打开博客，OK!</p>
-<p>下次写关于 Hexo 美化的博文。</p>
-<h1 id="u53C2_u8003_u8D44_u6599"><a href="#u53C2_u8003_u8D44_u6599" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
-<li><a href="http://sunwhut.com/2015/10/30/buildBlog/" target="_blank" rel="external">如何利用GitHub Pages和Hexo快速搭建个人博客 </a> by sunwhut</li>
-<li><a href="http://www.jianshu.com/p/05289a4bc8b2" target="_blank" rel="external">如何搭建一个独立博客——简明Github Pages与Hexo教程</a> by CnFeat</li>
-<li><a href="http://blog.fens.me/hexo-blog-github/" target="_blank" rel="external">Hexo在github上构建免费的Web应用</a> by 张丹(Conan)</li>
-<li><a href="http://www.cnblogs.com/liulangmao/p/4323064.html" target="_blank" rel="external">使用hexo搭建github.io博客(一)</a> by 流浪猫の窝</li>
-</ul>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>看了很多网上的朋友写的关于在 GitHub 上利用 Git 和 Hexo 搭建静态博客的文章，对于完全“小白”的我，尽管一步一步诚慌诚恐地操作，总有这样或那样的问题令我无所适从。参照 N 个博友的方法后，磕磕绊绊地总算搭建成了，将具体的方法逐一记录，以备参考。</p>
-<h]]>
-    </summary>
-    
-      <category term="git" scheme="http://yoursite.com/tags/git/"/>
-    
-      <category term="github" scheme="http://yoursite.com/tags/github/"/>
-    
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
-    
-      <category term="Blog" scheme="http://yoursite.com/categories/Blog/"/>
-    
-  </entry>
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
   
-  <entry>
-    <title><![CDATA[给我未来的孩子]]></title>
-    <link href="http://yoursite.com/2016/02/04/To-My-Son/"/>
-    <id>http://yoursite.com/2016/02/04/To-My-Son/</id>
-    <published>2016-02-03T16:00:00.000Z</published>
-    <updated>2016-02-15T08:14:58.711Z</updated>
-    <content type="html"><![CDATA[<p>　　当年在学校干过播音室的活儿，一位老师（忘记姓啥了，也是小有点难过）给了一盘朗诵卡带（嘿嘿，有多少人还记得这玩意儿？）。以前听朗诵觉得太作，没太在意，束之高阁好一阵子！这位老师也是认真，天天等我放这盘带子，估计等烦了，就督促我敢紧的放。这一放不要紧，等同于为我打开了新世界的大门，朗诵原来可以这样美！可惜，毕业时老师说啥也不送我这盘带子，彻底断了我的念想。即便在网上疯狂的 Search，再也找不回那个沉着、睿智的女生朗诵了。只留下一篇总也挥之不去的散文……
-　　</p>
-<h1 id="u7ED9_u6211_u672A_u6765_u7684_u5B69_u5B50"><a href="#u7ED9_u6211_u672A_u6765_u7684_u5B69_u5B50" class="headerlink" title="给我未来的孩子"></a>给我未来的孩子</h1><h3 id="u5F20_u6885"><a href="#u5F20_u6885" class="headerlink" title="张梅"></a>张梅</h3><p>　　孩子，我首先希望你自始至终都是一个理想主义者。你可以是农民，可以是工程师，可以是演员，可以是流浪汉，但你必须是个理想主义者。当你童年，我们讲英雄的故事给你听，并不是要你一定成为英雄，而是希望你具有纯正的品格；当你少年，我们让你接触诗歌、绘画、音乐，是为了让你的心灵填满高尚的情趣。这些高尚的情趣会支撑你的一生，使你在最严酷的冬天也不会忘记玫瑰的芳香。理想会使人出众。</p>
-<p>　　孩子，不要为自己的外形担忧。理想纯洁你的气质，而最美貌的女人也会因为庸俗而令人生厌。通向理想的道路往往不尽人意，而你亦会为此受尽磨难。但是，孩子，你尽管去争取，理想主义者的结局悲壮而决不可怜。在那貌似坎坷的人生中，你会结识到许多智者和君子，你会见到许多旁人无法遇到的风景和奇迹。选择平庸虽稳妥，但绝无色彩。不要为蝇头小利放弃自己的理想，不要为某种潮流而放弃自己的信念。物质世界的外表太过复杂，你要懂得如何去拒绝虚荣的诱惑。理想不是实惠的东西，它往往无法带给你尘世的享受。因此你必须习惯无人欣赏你，学会精神享受，学会与他人不同。</p>
-<p>　　其次，孩子，我希望你是个踏实的人。人生太过短促，而虚的东西又太多，你很容易眼花缭乱，最终一事无成。如果你是个美貌的女孩子，年轻的时候会有许多男性宠你，你得到的东西过于容易，这会使你流于浅薄和虚伪；如果你是一个极聪明的男孩，又会以为自己能够成就许多大事而流于轻佻。记住，每个人的能力有限，我们活在世上能做好一件事足矣。写好一本书，做好一个主妇。不要轻视平凡的人，不要投机取巧，不要攻击自己做不到的事。你长大后会知道，做好一件好事太难，但决不要放弃。</p>
-<p>　　你要懂得和珍惜感情。不管男人女人，不管墙内墙外，相交一场实在不容易。交友的过程会有误会和摩擦，但你想一想，偌大世界，能有缘结伴而行的又有几人？你要明白朋友终会离去，生活中能有人伴在你身边，听你倾谈，倾谈给你听，你就应该感激。要爱自己和爱他人，要懂自己和懂他人。你的心要如溪水般柔软，你的眼波要像春天一样妩媚。你要会流泪，会孤身一人坐在黑暗中听伤感的音乐。你要懂得欣赏悲剧，悲剧能丰富你的心灵。</p>
-<p>　　希望你不要媚俗。你是个独立的人，无人能抹杀你的独立性，除非你向世俗妥协。要学会欣赏真，要在重重面具下看到真。世上圆滑标准的人很多，但出类拔萃的人极少。而往往出类拔萃又隐藏在卑琐狂浪之下。在形式上，我们无法与既定的世俗争斗，而在内心，我们都是自己的国王。如果你的脸上出现谄媚的笑容，我将会羞愧地掩面而去。世俗许多东西虽耀眼却无价值，不要把自己置于大众的天平上，你会因此无所适从，人云亦云。</p>
-<p>　　在具体的做人上，我希望你不要打断别人的谈话，不要娇气十足。你每天至少要拿出两小时来读书，要回信给写信给你的朋友。不要老是想着别人应该为你做些什么，而要想着怎么去帮助他人。</p>
-<p>　　借他人的东西要还，不要随便接收别人的恩惠。要记住，别人的东西，再好也是别人的，自己的东西，再差也是自己的。还有一件事，虽然做起来很难，但相当重要，这就是要有勇气正视自己的缺点。你会一年年地长大，你渐渐会遇到比你强，比你优秀的人，你会发现自己身上有许多你所厌恶的缺点。这会使你沮丧和自卑。但你一定要正视它，不要躲避，要一点一点地加以改正。战胜自己比征服他人还要艰巨和有意义。</p>
-<p>　　不管世界潮流如何变化，但人的优秀品质却是永恒的：正直、勇敢、独立。我希望你是一个优秀的人。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>　　当年在学校干过播音室的活儿，一位老师（忘记姓啥了，也是小有点难过）给了一盘朗诵卡带（嘿嘿，有多少人还记得这玩意儿？）。以前听朗诵觉得太作，没太在意，束之高阁好一阵子！这位老师也是认真，天天等我放这盘带子，估计等烦了，就督促我敢紧的放。这一放不要紧，等同于为我打开了新世界]]>
-    </summary>
-    
-      <category term="memory" scheme="http://yoursite.com/tags/memory/"/>
-    
-      <category term="myson" scheme="http://yoursite.com/tags/myson/"/>
-    
-      <category term="Memory" scheme="http://yoursite.com/categories/Memory/"/>
-    
-  </entry>
-  
-</feed>
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.tableofcontents.min.js"></script>
+<script src="/js/tocgenerator.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+</body>
+</html>
