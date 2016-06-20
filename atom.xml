@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-06-06T10:00:59.554Z</updated>
+  <updated>2016-06-20T03:37:50.379Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,55 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Emacs启动外部GUI程序]]></title>
+    <link href="http://yoursite.com/2016/06/20/Emacs%E5%90%AF%E5%8A%A8%E5%A4%96%E9%83%A8GUI%E7%A8%8B%E5%BA%8F/"/>
+    <id>http://yoursite.com/2016/06/20/Emacs启动外部GUI程序/</id>
+    <published>2016-06-20T08:09:12.000Z</published>
+    <updated>2016-06-20T03:37:50.379Z</updated>
+    <content type="html"><![CDATA[<h1 id="Emacs_u542F_u52A8_u5916_u90E8GUI_u7A0B_u5E8F"><a href="#Emacs_u542F_u52A8_u5916_u90E8GUI_u7A0B_u5E8F" class="headerlink" title="Emacs启动外部GUI程序"></a>Emacs启动外部GUI程序</h1><h2 id="u5F15_u5B50"><a href="#u5F15_u5B50" class="headerlink" title="引子"></a>引子</h2><p>自开始折腾 Emacs 后，后遗症明显：欲用键盘操纵一切。</p>
+<p>现在更甚，“开始”-&gt;“所有程序”-&gt;“XXX”都懒得操作，网上觅得各种快速启动软件逐一测试。花哨的，不喜，低调的我辜负了软件设计者的良苦之心；功能多的，不喜，你一快速启动软件，整那么多事儿烦不？</p>
+<p>最后，顺心者有两款：<a href="https://code.google.com/archive/p/altrun/downloads" target="_blank" rel="external">ALTRun</a> 和 <a href="http://download.cnet.com/windows/idiogen-software/3260-20_4-80801-1.html" target="_blank" rel="external">Runfast</a>。可惜，都已停止维护。ALTRun 时有崩溃； Runfast 添加新程序，初次运行，无响应，需再次快捷键打开，方可运行。没娘的娃儿啊…</p>
+<h2 id="u66D9_u5149"><a href="#u66D9_u5149" class="headerlink" title="曙光"></a>曙光</h2><p>实为偶然得之。Win 的 Cmd 太不顺手了，各种 Google欲换之而后快，找到 <a href="http://alternativeto.net/" target="_blank" rel="external">Alternativeto</a> 这个神网站，自我介绍是： </p>
+<blockquote>
+<p>  AlternativeTo is a free service that helps you find better alternatives to the products you love and hate.</p>
+</blockquote>
+<p> 于是了解到还有 <a href="http://conemu.github.io/" target="_blank" rel="external">ConEmu</a>、<a href="http://cmder.net/" target="_blank" rel="external">cmder</a> 等好玩好用的 console。</p>
+<h3 id="ConEmu"><a href="#ConEmu" class="headerlink" title="ConEmu"></a>ConEmu</h3><p>亮点多，不必多说。缺点暂有一个，不支持中文，<code>ls</code>下中文一片乱码。解决无果，弃。</p>
+<h3 id="cmder"><a href="#cmder" class="headerlink" title="cmder"></a>cmder</h3><p>亮点更多，阅者可 google。中文乱码可解决，但不是网上给<code>ls</code>alias 个别名，而是把 Git 的 ls.exe 复制到 cmder 的 bin 文件夹。</p>
+<p>哦？！即然可以这样，那么直接给某个程序 alias 个别名，不就可以启动想打开程序！实践之：</p>
+<p>启动 cmder，Win+Alt+p 打开设置，依次点击 Startup-&gt;Environment，在右边输入框内操作。例如要启动 firefox：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> ff=<span class="string">"C:\Program Files\Mozilla Firefox\firefox.exe"</span></span><br></pre></td></tr></table></figure>
+<p>重启 cmder，即可在命令行输入 ff 启动 firefox 了，熟悉的小狐狸来了！</p>
+<p>至此，忽然心一动，能煮咖啡的 Emacs 难道不能做这件事吗？google 之。</p>
+<h2 id="u4E07_u80FD_u7684_Emacs"><a href="#u4E07_u80FD_u7684_Emacs" class="headerlink" title="万能的 Emacs"></a>万能的 Emacs</h2><p>当然，Emacs 完全可以胜任启动外部程序的重任。路子还挺多：</p>
+<ul>
+<li>写个调用函数，放在 .emacs 里。</li>
+<li>Eshell 中打开</li>
+</ul>
+<p>额外辅助：<a href="https://www.cygwin.com/" target="_blank" rel="external">Cygwin</a> 的 run.exe 程序。</p>
+<h3 id="u51FD_u6570"><a href="#u51FD_u6570" class="headerlink" title="函数"></a>函数</h3><p>还是以 firefox 为例，将以下函数放到 .emacs 里。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">;;;; run firfox&#10;(defun run-ff()&#10;  (interactive)&#10;  (w32-shell-execute &#34;open&#34; &#34;C://Program Files//Mozilla Firefox//firefox.exe&#34;)&#10;  )</span><br></pre></td></tr></table></figure>
+<p>打开 Emacs，Alt+x，命令行输入：run-ff</p>
+<h3 id="Eshell"><a href="#Eshell" class="headerlink" title="Eshell"></a>Eshell</h3><p>Emacs文件来夹-&gt;.emacs.d-&gt;eshell，有个 alias 文件，用 Emacs（或其他文本编辑器）打开，填写：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> run ff=<span class="string">"C:\Program Files\Mozilla Firefox\firefox.exe"</span></span><br></pre></td></tr></table></figure>
+<p>打开 Eshell，输入<code>ff</code>，好了，可以告别快速启动软件了。</p>
+<p><strong>PS</strong> 不使用 Cygwin 的 run 也可以，会出现要么打不开有 GUI 的程序，要么打开后开启独占模式，Eshell 只有等进程退出后才能缓过劲来。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="Emacs_u542F_u52A8_u5916_u90E8GUI_u7A0B_u5E8F"><a href="#Emacs_u542F_u52A8_u5916_u90E8GUI_u7A0B_u5E8F" class="headerlink" title="Emac]]>
+    </summary>
+    
+      <category term="Eshell" scheme="http://yoursite.com/tags/Eshell/"/>
+    
+      <category term="emacs" scheme="http://yoursite.com/tags/emacs/"/>
+    
+      <category term="software" scheme="http://yoursite.com/tags/software/"/>
+    
+      <category term="software" scheme="http://yoursite.com/categories/software/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Emacs 快捷键列表]]></title>

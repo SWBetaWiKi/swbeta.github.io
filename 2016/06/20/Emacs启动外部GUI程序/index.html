@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Emacs启动外部GUI程序 | SWBetaWiKi</title>
+  <meta name="author" content="SWBeta">
+  
+  <meta name="description" content="Writing 1000 Words a Week Changed My Life.">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Emacs启动外部GUI程序"/>
+  <meta property="og:site_name" content="SWBetaWiKi"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="SWBetaWiKi" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">  
+  <link rel="stylesheet" href="/css/sidenav.css" media="screen" type="text/css">  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+</head>
+
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/">SWBetaWiKi</a><span class="split"></span><span class="title">Emacs启动外部GUI程序</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2016-06-20</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  <div class="col-xs-12 col-sm-3 col-md-3 toc"> 
+	<!-- toc -->
+<script type="text/javascript">
+		jQuery(document).ready(function() {
+ 		   generateWikiTOC('.note', '.toc',  2 , 2 );
+		});
+</script>
+  </div><!-- col-md-3 -->
+  
+  
+
+  
+  <div class="col-xs-12 col-sm-9 col-md-9 note">
+	
+
+	  <!-- content -->
+	  <h1 id="Emacs_u542F_u52A8_u5916_u90E8GUI_u7A0B_u5E8F"><a href="#Emacs_u542F_u52A8_u5916_u90E8GUI_u7A0B_u5E8F" class="headerlink" title="Emacs启动外部GUI程序"></a>Emacs启动外部GUI程序</h1><h2 id="u5F15_u5B50"><a href="#u5F15_u5B50" class="headerlink" title="引子"></a>引子</h2><p>自开始折腾 Emacs 后，后遗症明显：欲用键盘操纵一切。</p>
+<p>现在更甚，“开始”-&gt;“所有程序”-&gt;“XXX”都懒得操作，网上觅得各种快速启动软件逐一测试。花哨的，不喜，低调的我辜负了软件设计者的良苦之心；功能多的，不喜，你一快速启动软件，整那么多事儿烦不？</p>
+<p>最后，顺心者有两款：<a href="https://code.google.com/archive/p/altrun/downloads" target="_blank" rel="external">ALTRun</a> 和 <a href="http://download.cnet.com/windows/idiogen-software/3260-20_4-80801-1.html" target="_blank" rel="external">Runfast</a>。可惜，都已停止维护。ALTRun 时有崩溃； Runfast 添加新程序，初次运行，无响应，需再次快捷键打开，方可运行。没娘的娃儿啊…</p>
+<h2 id="u66D9_u5149"><a href="#u66D9_u5149" class="headerlink" title="曙光"></a>曙光</h2><p>实为偶然得之。Win 的 Cmd 太不顺手了，各种 Google欲换之而后快，找到 <a href="http://alternativeto.net/" target="_blank" rel="external">Alternativeto</a> 这个神网站，自我介绍是： </p>
+<blockquote>
+<p>  AlternativeTo is a free service that helps you find better alternatives to the products you love and hate.</p>
+</blockquote>
+<p> 于是了解到还有 <a href="http://conemu.github.io/" target="_blank" rel="external">ConEmu</a>、<a href="http://cmder.net/" target="_blank" rel="external">cmder</a> 等好玩好用的 console。</p>
+<h3 id="ConEmu"><a href="#ConEmu" class="headerlink" title="ConEmu"></a>ConEmu</h3><p>亮点多，不必多说。缺点暂有一个，不支持中文，<code>ls</code>下中文一片乱码。解决无果，弃。</p>
+<h3 id="cmder"><a href="#cmder" class="headerlink" title="cmder"></a>cmder</h3><p>亮点更多，阅者可 google。中文乱码可解决，但不是网上给<code>ls</code>alias 个别名，而是把 Git 的 ls.exe 复制到 cmder 的 bin 文件夹。</p>
+<p>哦？！即然可以这样，那么直接给某个程序 alias 个别名，不就可以启动想打开程序！实践之：</p>
+<p>启动 cmder，Win+Alt+p 打开设置，依次点击 Startup-&gt;Environment，在右边输入框内操作。例如要启动 firefox：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> ff=<span class="string">"C:\Program Files\Mozilla Firefox\firefox.exe"</span></span><br></pre></td></tr></table></figure>
+<p>重启 cmder，即可在命令行输入 ff 启动 firefox 了，熟悉的小狐狸来了！</p>
+<p>至此，忽然心一动，能煮咖啡的 Emacs 难道不能做这件事吗？google 之。</p>
+<h2 id="u4E07_u80FD_u7684_Emacs"><a href="#u4E07_u80FD_u7684_Emacs" class="headerlink" title="万能的 Emacs"></a>万能的 Emacs</h2><p>当然，Emacs 完全可以胜任启动外部程序的重任。路子还挺多：</p>
+<ul>
+<li>写个调用函数，放在 .emacs 里。</li>
+<li>Eshell 中打开</li>
+</ul>
+<p>额外辅助：<a href="https://www.cygwin.com/" target="_blank" rel="external">Cygwin</a> 的 run.exe 程序。</p>
+<h3 id="u51FD_u6570"><a href="#u51FD_u6570" class="headerlink" title="函数"></a>函数</h3><p>还是以 firefox 为例，将以下函数放到 .emacs 里。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">;;;; run firfox&#10;(defun run-ff()&#10;  (interactive)&#10;  (w32-shell-execute &#34;open&#34; &#34;C://Program Files//Mozilla Firefox//firefox.exe&#34;)&#10;  )</span><br></pre></td></tr></table></figure>
+<p>打开 Emacs，Alt+x，命令行输入：run-ff</p>
+<h3 id="Eshell"><a href="#Eshell" class="headerlink" title="Eshell"></a>Eshell</h3><p>Emacs文件来夹-&gt;.emacs.d-&gt;eshell，有个 alias 文件，用 Emacs（或其他文本编辑器）打开，填写：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">alias</span> run ff=<span class="string">"C:\Program Files\Mozilla Firefox\firefox.exe"</span></span><br></pre></td></tr></table></figure>
+<p>打开 Eshell，输入<code>ff</code>，好了，可以告别快速启动软件了。</p>
+<p><strong>PS</strong> 不使用 Cygwin 的 run 也可以，会出现要么打不开有 GUI 的程序，要么打开后开启独占模式，Eshell 只有等进程退出后才能缓过劲来。</p>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+			
+			
+		
+	
+		
+			
+			
+			
+		
+			
+		
+	
+		
+	
+		
+	
+	
+	
+		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next"><a href="/2016/06/06/Emacs快捷键列表/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+  &copy; 2016 SWBeta
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.tableofcontents.min.js"></script>
+<script src="/js/tocgenerator.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+</body>
+</html>
